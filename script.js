@@ -19,7 +19,7 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var allnumbers = "0123456789";
 var allspecial = "#$%&()*+,-./:;<=>?";
 var uppercase = lowercase.toUpperCase();
-
+var finalArray = [];
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function generatePassword() {
@@ -35,12 +35,11 @@ function generatePassword() {
 
     var capitals = input2.toLowerCase();
     var uppercaseArray = Array.from(uppercase);
-    var choices = [];
 
 
     if (capitals === "yes") {
       alert("Your password will include capital letters");
-      choices.push(uppercase)
+      finalArray.push(uppercase)
       console.log(uppercaseArray);
     } else if (!capitals || capitals === "no") {
       alert("Your password will not include capital letters");
@@ -53,11 +52,10 @@ function generatePassword() {
 
     var lowers = input3.toLowerCase();
     var lowercaseArray = Array.from(lowercase)
-    var choices = [];
 
     if (lowers === "yes") {
       alert("Your password will include lowercase letters");
-      choices.push(lowercase)
+      finalArray.push(lowercase)
       console.log(lowercaseArray);
     } else if (!lowers || lowers === "no") {
       alert("Your password will not include lowercase letters");
@@ -70,11 +68,10 @@ function generatePassword() {
 
     var numbers = input4.toLowerCase();
     var allnumbersArray = Array.from(allnumbers);
-    var choices = [];
 
     if (numbers === "yes") {
       alert("Your password will include numbers");
-      choices.push(allnumbers)
+      finalArray.push(allnumbers)
       console.log(allnumbersArray);
     } else if (!numbers || numbers === "no") {
       alert("Your password will not include numbers");
@@ -87,17 +84,14 @@ function generatePassword() {
 
     var special = input5.toLowerCase();
     var allspecialArray = Array.from(allspecial);
-    var choices = [];
 
     if (special === "yes") {
       alert("Your password will include special characters");
-      choices.push(allspecial)
+      finalArray.push(allspecial)
       console.log(allspecialArray);
     } else if (!special || special === "no") {
       alert("Your password will not include special characters");
     }
-
-
 
   } else {
     alert("NOT COOL.");
@@ -105,5 +99,26 @@ function generatePassword() {
     return;
   }
 
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Randomizer
+  function Randomizer() {
+    var j = 25;
+    var i = Math.floor(Math.random() * finalArray.length)
+    if (finalArray[i].length == 26) {
+      j = 25;
+    } else if (finalArray[i].length == 10) {
+      j = 9;
+    } else if (finalArray[i].length == 18) {
+      j = 17;
+    }
+    var char1 = (finalArray[i][Math.floor(Math.random() * j)])
+
+    return char1;
+  }
+  var finalArrayAgain = [];
+
+  for (k = 0; k < input; k++) {
+      finalArrayAgain.push(Randomizer())
+
+  } alert(finalArrayAgain.join(''));
 }
