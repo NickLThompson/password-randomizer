@@ -36,9 +36,9 @@ available options.
 
 ## Resources
 
-[Live Site](https://nicklthompson.github.io/seo-refactor/)
+[Live Site](https://nicklthompson.github.io/password-randomizer/)
 
-[Repository](https://github.com/NickLThompson/seo-refactor)
+[Repository](https://github.com/NickLThompson/password-randomizer)
 
 ## Status
 
