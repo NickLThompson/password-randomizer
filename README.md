@@ -1,25 +1,51 @@
-<!-- # password-randomizer
-Homework to create a password randomizer based on the listed and wanted criteria
+# Password-Randomizer
 
+## Table of Contents
+- [Description](#description)
+- [Visuals](#visuals)
+- [Resources](#resources)
 
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
+## Description
 
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
+This is a website that will generate a password for you
 
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
+based on the criteria that you want to include in your 
 
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+password. You choose a length between 8-128 characters
 
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
+and have the option of including/excluding uppercase and
 
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
+lowercase characters, numbers, and symbols. The randomly
 
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page -->
+generated password shows up in an alert prompt on the screen.
+
+## Usage
+
+The usage of this is to generate a completely randomized 
+
+password for usage anywhere. It almost guarentees that 
+
+the password will not be figured out because it will be
+
+completely random, even if you only choose one of the 4
+
+available options.
+
+## Visuals
+![makeareadme] (https://gyazo.com/674a080f73e365f39e511468372db034)
+
+## Resources
+
+[Live Site](https://nicklthompson.github.io/seo-refactor/)
+
+[Repository](https://github.com/NickLThompson/seo-refactor)
+
+## Status
+
+The status of this project is a success. I worked on this for 
+
+multiple hours for multiple different days and the outcome was
+
+exactly what I wanted. It was tough but I'm glad that I was able
+
+to overcome it and learn from it. 
