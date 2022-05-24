@@ -34,126 +34,76 @@ function generatePassword() {
     var input2 = prompt("Would you like your password to include capital letters?");
 
     var capitals = input2.toLowerCase();
+    var uppercaseArray = Array.from(uppercase);
+    var choices = [];
 
 
     if (capitals === "yes") {
       alert("Your password will include capital letters");
+      choices.push(uppercase)
+      console.log(uppercaseArray);
     } else if (!capitals || capitals === "no") {
       alert("Your password will not include capital letters");
     }
 
-    var uppercaseArray = Array.from(uppercase);
-  var choices = [];
-  if (capitals === "yes") {
-    choices.push(uppercase)
-    choices.forEach(generatePassword);
-    console.log(uppercaseArray);
-  }
+
 
     // Second question: Lowercase or not?
     var input3 = prompt("Would you like your password to include lowercase letters?");
 
     var lowers = input3.toLowerCase();
+    var lowercaseArray = Array.from(lowercase)
+    var choices = [];
 
     if (lowers === "yes") {
       alert("Your password will include lowercase letters");
+      choices.push(lowercase)
+      console.log(lowercaseArray);
     } else if (!lowers || lowers === "no") {
       alert("Your password will not include lowercase letters");
     }
 
-    var lowercaseArray = Array.from(lowercase);
-    var choices = [];
-    if (lowers === "yes") {
-      choices.push(lowercase)
-      choices.forEach(generatePassword);
-      console.log(lowercaseArray);
-    }
+
 
     // Third question: Numbers or not?
     var input4 = prompt("Would you like your password to include numbers?")
 
     var numbers = input4.toLowerCase();
+    var allnumbersArray = Array.from(allnumbers);
+    var choices = [];
 
     if (numbers === "yes") {
       alert("Your password will include numbers");
+      choices.push(allnumbers)
+      console.log(allnumbersArray);
     } else if (!numbers || numbers === "no") {
       alert("Your password will not include numbers");
     }
 
-    var allnumbersArray = Array.from(allnumbers);
-  var choices = [];
-  if (numbers === "yes") {
-    choices.push(allnumbers)
-    choices.forEach(generatePassword);
-    console.log(allnumbersArray);
-  }
+
 
     // Final question: Special characters or not?
     var input5 = prompt("Would you like your password to include special characters?");
 
     var special = input5.toLowerCase();
+    var allspecialArray = Array.from(allspecial);
+    var choices = [];
 
     if (special === "yes") {
       alert("Your password will include special characters");
+      choices.push(allspecial)
+      console.log(allspecialArray);
     } else if (!special || special === "no") {
       alert("Your password will not include special characters");
     }
 
-    var allspecialArray = Array.from(allspecial);
-  var choices = [];
-  if (special === "yes") {
-    choices.push(allspecial)
-    choices.forEach(generatePassword);
-    console.log(allspecialArray);
-  }
-  
+
+
   } else {
     alert("NOT COOL.");
 
     return;
   }
 
-  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  // Creating the password generator
-  // lowercaseArray is an array created from the variable "lowercase"
-  // var uppercaseArray = Array.from(uppercase);
-  // var choices = [];
-  // if (capitals === "yes") {
-  //   choices.push(uppercase)
-  //   choices.forEach(generatePassword);
-  //   console.log(uppercaseArray);
-  // }
-
-  // var lowercaseArray = Array.from(lowercase);
-  // var choices = [];
-  // if (lowers === "yes") {
-  //   choices.push(lowercase)
-  //   choices.forEach(generatePassword);
-  //   console.log(lowercaseArray);
-  // }
-
-  // var allnumbersArray = Array.from(allnumbers);
-  // var choices = [];
-  // if (numbers === "yes") {
-  //   choices.push(allnumbers)
-  //   choices.forEach(generatePassword);
-  //   console.log(allnumbersArray);
-  // }
-
-  // var allspecialArray = Array.from(allspecial);
-  // var choices = [];
-  // if (special === "yes") {
-  //   choices.push(allspecial)
-  //   choices.forEach(generatePassword);
-  //   console.log(allspecialArray);
-  // }
-
-// Actual randomizer
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-var random = random[Math.floor(Math.random() * 18)];
-console.log(random);
-
-
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 }
-
